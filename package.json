@@ -1,0 +1,25 @@
+{
+  "name": "mcstats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "discord.js": "^12.0.2",
+    "discord.js-commando": "github:discordjs/Commando",
+    "dotenv": "^8.2.0",
+    "mc-motd-transform": "github:dada513/mc-motd-transform",
+    "minecraft-protocol": "git+https://github.com/dada513/node-minecraft-protocol.git",
+    "sqlite": "^3.0.6",
+    "sqlstring": "^2.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
