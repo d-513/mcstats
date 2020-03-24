@@ -1,5 +1,5 @@
 require("dotenv").config();
-const { token, owner } = process.env;
+const { TOKEN, OWNER } = process.env;
 const { CommandoClient } = require("discord.js-commando");
 const path = require("path");
 
@@ -14,7 +14,7 @@ const dbPromise = open("./db.sqlite", { Promise });
 ("define client");
 const client = new CommandoClient({
   commandPrefix: "mcs!",
-  owner: owner
+  owner: OWNER
 });
 ("refresh stats");
 global.refreshStats = async () => {
@@ -68,4 +68,4 @@ client.once("ready", () => {
 ("catch possible errors");
 client.on("error", console.error);
 ("Login to discord");
-client.login(token);
+client.login(TOKEN);
