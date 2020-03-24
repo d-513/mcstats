@@ -19,6 +19,9 @@ const client = new CommandoClient({
 ("refresh stats");
 global.refreshStats = async () => {
   const db = await dbPromise;
+  await db.run(
+    `CREATE TABLE IF NOT EXISTS "stats"("ID"	INTEGER,"SERVER"	TEXT,"CHANNEL"	TEXT,"MCSERVERHOST"	TEXT,"MCSERVERPORT"	INTEGER,PRIMARY KEY("ID"))`
+  );
   const servers = await db.all("SELECT * FROM stats");
   servers.forEach(async server => {
     try {
