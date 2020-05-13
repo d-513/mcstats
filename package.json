@@ -4,22 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon src/index.js",
+    "prod": "node src/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bluebird": "^3.7.2",
-    "discord.js": "^12.0.2",
+    "better-sqlite3": "^7.0.1",
+    "discord.js": "^12.2.0",
     "discord.js-commando": "github:discordjs/Commando",
     "dotenv": "^8.2.0",
-    "mc-motd-transform": "github:dada513/mc-motd-transform",
-    "minecraft-protocol": "git+https://github.com/dada513/node-minecraft-protocol.git",
-    "sqlite": "^3.0.6",
-    "sqlstring": "^2.3.1"
+    "minecraft-protocol": "^1.11.0",
+    "sqlstring": "^2.3.2"
   },
   "devDependencies": {
+    "eslint": "^7.0.0",
     "nodemon": "^2.0.2"
+  },
+  "engines": {
+    "node": "12.x"
   }
 }
